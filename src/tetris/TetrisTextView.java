@@ -11,9 +11,17 @@ import javax.lang.model.type.UnknownTypeException;
  */
 public class TetrisTextView {
 
-    public void convertToText(){
+    public String convertToText(Board board){
+        String string = "";
+        for (int i=0; i < board.getRows(); i ++ ) {
 
+            for (int j = 0; j < board.getColumns(); j++) {
+                string += squareTypeSymbol(board.getSquareType(i,j));
+            }
+            string += "\n";
 
+        }
+        return string;
     }
 
     public static String squareTypeSymbol(SquareType squareType){
