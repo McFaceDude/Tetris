@@ -12,37 +12,37 @@ import javax.lang.model.type.UnknownTypeException;
 public class TetrisTextView {
 
     public String convertToText(Board board){
-        String string = "";
+        StringBuilder textField = new StringBuilder();
         for (int i=0; i < board.getRows(); i ++ ) {
 
             for (int j = 0; j < board.getColumns(); j++) {
-                string += squareTypeSymbol(board.getSquareType(i,j));
+                textField.append(squareTypeSymbol(board.getSquareType(i,j)));
             }
-            string += "\n";
 
+            textField.append("\n");
         }
-        return string;
+        return textField.toString();
     }
 
     public static String squareTypeSymbol(SquareType squareType){
 
         switch (squareType){
             case I:
-                return "#";
+                return "# ";
             case O:
-                return "%";
+                return "% ";
             case T:
-                return "&";
+                return "& ";
             case S:
-                return "@";
+                return "@ ";
             case Z:
-                return "$";
+                return "$ ";
             case J:
-                return "?";
+                return "? ";
             case L:
-                return "?";
+                return "? ";
             case EMPTY:
-                return "-";
+                return "- ";
             case OUTSIDE:
                 return "OUTSIDE";
             default:

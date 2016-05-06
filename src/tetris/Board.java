@@ -22,7 +22,6 @@ public class Board {
         final int DEFAULT_COLUMNS = 10;
         field = new SquareType[DEFAULT_ROWS][DEFAULT_COLUMNS];
 
-
     }
 
     public SquareType getSquareType(int row, int column){

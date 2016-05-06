@@ -11,6 +11,7 @@ public class BoardTest{
         TetrisTextView tetrisTextView = new TetrisTextView();
 
         Board testboard = new Board();
+
         //System.out.println(testboard.getRows());
         //System.out.println(testboard.getColumns());
 
@@ -23,7 +24,12 @@ public class BoardTest{
             }
 
         }
-        System.out.println(tetrisTextView.convertToText(testboard));
+        //System.out.println(tetrisTextView.convertToText(testboard));
+        for (int i= 0; i < 10; i++){
+            RandomBoard randomBoard = new RandomBoard();
+            System.out.println(tetrisTextView.convertToText(randomBoard.getRandomBoard()));
+        }
+
     }
 }
 
