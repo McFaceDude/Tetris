@@ -18,19 +18,19 @@ public class TetrominoMaker {
     public Poly getPoly(int n){
 
         switch (n){
-            case 1:
+            case 0:
                 return createIPoly();
-            case 2:
+            case 1:
                 return createOPoly();
-            case 3:
+            case 2:
                 return createTPoly();
-            case 4:
+            case 3:
                 return createSPoly();
-            case 5:
+            case 4:
                 return createZPoly();
-            case 6:
+            case 5:
                 return createJPoly();
-            case 7:
+            case 6:
                 return createLPoly();
             default:
                 return createOPoly();
@@ -40,25 +40,25 @@ public class TetrominoMaker {
     private Poly createIPoly() {
         SquareType[][] iField = new SquareType[4][4];
 
-        iField[0][0]= SquareType.I;
+        iField[0][0]= SquareType.EMPTY;
         iField[1][0]= SquareType.EMPTY;
         iField[2][0]= SquareType.EMPTY;
-        iField[3][0]= SquareType.EMPTY;
+        iField[3][0]= SquareType.I;
 
-        iField[0][1]= SquareType.I;
+        iField[0][1]= SquareType.EMPTY;
         iField[1][1]= SquareType.EMPTY;
         iField[2][1]= SquareType.EMPTY;
-        iField[3][1]= SquareType.EMPTY;
+        iField[3][1]= SquareType.I;
 
-        iField[0][2]= SquareType.I;
+        iField[0][2]= SquareType.EMPTY;
         iField[1][2]= SquareType.EMPTY;
         iField[2][2]= SquareType.EMPTY;
-        iField[3][2]= SquareType.EMPTY;
+        iField[3][2]= SquareType.I;
 
-        iField[0][3]= SquareType.I;
+        iField[0][3]= SquareType.EMPTY;
         iField[1][3]= SquareType.EMPTY;
         iField[2][3]= SquareType.EMPTY;
-        iField[3][3]= SquareType.EMPTY;
+        iField[3][3]= SquareType.I;
 
         return new Poly(iField, SquareType.I);
     }
