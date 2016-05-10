@@ -10,9 +10,6 @@ package tetris;
 public class Board {
     private SquareType[][] field;
 
-
-
-
     public Board(int rows, int columns) {
         field = new SquareType[rows][columns];
 
@@ -24,6 +21,17 @@ public class Board {
 
     }
 
+    public void setPolyFild(int row, int column, Poly poly){
+
+        for (int i=0; i < poly.getPolyField().length; i ++ ){
+
+            for (int j = 0; j < poly.getPolyField().length; j ++){
+                setSquareType(i,j,poly.getPolyField()[i][j]);
+
+            }
+        }
+    }
+
     public SquareType getSquareType(int row, int column){
         return field[row][column];
     }
@@ -33,8 +41,8 @@ public class Board {
 
     public int getRows(){
         return field.length;
-
     }
+
     public int getColumns(){
         return field[0].length;
     }

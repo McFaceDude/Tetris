@@ -15,20 +15,13 @@ public class RandomBoard {
 
     public RandomBoard() {
 
-
-
-
         for (int i=0; i < randomBoard.getRows(); i ++ ){
             //System.out.println("outer loop "+i);
             for (int j = 0; j < randomBoard.getColumns(); j ++){
                 //System.out.println("inner loop "+j);
                 randomBoard.setSquareType(i,j,randomSquareType());
-
             }
-
         }
-
-
     }
 
     private SquareType randomSquareType(){
